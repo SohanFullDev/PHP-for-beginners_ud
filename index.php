@@ -1,6 +1,6 @@
 <?php
 
-require 'database.php';
+require 'includes/database.php';
 
 $sql = "SELECT *
         FROM article
@@ -17,7 +17,7 @@ if ($results === false) {
   //  var_dump($articles);
 }
 ?>
-<?php require 'header.php'; ?>
+<?php require 'includes/header.php'; ?>
 
         <?php if (empty($articles)): ?> <!-- ei if pore add hobe aghe foreach nicher -->
             <p>No articles found.</p>
@@ -37,4 +37,4 @@ if ($results === false) {
 
         <?php endif; ?>
    
-        <?php require 'footer.php'; ?>
+        <?php require 'includes/footer.php'; ?>
