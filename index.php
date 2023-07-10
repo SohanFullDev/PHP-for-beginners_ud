@@ -49,23 +49,13 @@
     </main>
 
     <!-- 
-                t43-notes
+                t44-notes
        sql queries
        ----------
       
-SELECT * FROM article
-–
-SELECT title FROM article
+SELECT * FROM `article` WHERE title = 'Title for post one';
 -
-SELECT * FROM article WHERE id = 2
--
-SELECT * FROM article WHERE id = 999
--
-SELECT * FROM article WHERE title = 'Title for post two';
-–
-SELECT * FROM article WHERE title != 'Title for post two';
-–
-SELECT * FROM article WHERE title = 'Title for post two' OR title = 'Title for post five';         
+SELECT * FROM article ORDER BY title DESC;
 
      -->
     
