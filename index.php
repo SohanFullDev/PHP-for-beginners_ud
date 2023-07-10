@@ -1,17 +1,6 @@
 <?php
 
-
-$db_host = "localhost";
-$db_name = "cms";
-$db_user = "root";
-$db_pass = "";
-
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-
-if (mysqli_connect_error()) {
-    echo mysqli_connect_error();
-    exit;
-}
+require 'database.php';
 
 $sql = "SELECT *
         FROM article
@@ -28,20 +17,8 @@ if ($results === false) {
   //  var_dump($articles);
 }
 ?>
+<?php require 'header.php'; ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-</head>
-<body>
-    <header>
-        <h1>My Blog</h1>
-    </header>
-    
-    <main>
         <?php if (empty($articles)): ?> <!-- ei if pore add hobe aghe foreach nicher -->
             <p>No articles found.</p>
             <?php else: ?>
@@ -59,7 +36,5 @@ if ($results === false) {
                 </ul>
 
         <?php endif; ?>
-    </main>
-
-</body>
-</html>
+   
+        <?php require 'footer.php'; ?>
