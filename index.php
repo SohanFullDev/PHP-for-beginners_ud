@@ -47,6 +47,27 @@
 
     </ul>
     </main>
+
+    <!-- 
+                t43-notes
+       sql queries
+       ----------
+      
+SELECT * FROM article
+–
+SELECT title FROM article
+-
+SELECT * FROM article WHERE id = 2
+-
+SELECT * FROM article WHERE id = 999
+-
+SELECT * FROM article WHERE title = 'Title for post two';
+–
+SELECT * FROM article WHERE title != 'Title for post two';
+–
+SELECT * FROM article WHERE title = 'Title for post two' OR title = 'Title for post five';         
+
+     -->
     
 </body>
 </html>
