@@ -1,4 +1,6 @@
-<?
+<?php
+
+
 $db_host = "localhost";
 $db_name = "cms";
 $db_user = "root";
@@ -11,4 +13,17 @@ if (mysqli_connect_error()) {
     exit;
 }
 
-echo "Connected successfully.";
+$sql = "SELECT *
+        FROM article
+        ORDER BY published_at;";
+
+$results = mysqli_query($conn, $sql);
+
+if ($results === false) {
+    echo mysqli_error($conn);
+} else {
+    //$articles = mysqli_fetch_all($results);
+    $articles = mysqli_fetch_all($results , MYSQLI_ASSOC);
+
+    var_dump($articles);
+}
